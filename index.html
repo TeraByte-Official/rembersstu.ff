@@ -10,11 +10,8 @@
     --bgNav：#444;
     --primaerText:#f1f1f1;
     --darkText:#111;
-    --mint: #B7F7DA;
-    --blue: #48d1cc;
-    --lila: #b57edc;
-    --pink: #EB71BE;
-    --apricot: #F6C8B4;
+    --yellow: #ff0;
+    --cyan: #0ff;
   }
   
   nav {
@@ -56,16 +53,15 @@
     font-size: 2.25rem; /* 36px */
     margin: 0;
     padding: 32px;
-    background-image: linear-gradient(90deg, var(--mint), var(--blue), var(--lila), var(--pink), var(--apricot));
+    align: center;
+    background-image: linear-gradient(90deg, var(--yellow), var(--cyan);
     color: var(--darkText);
   }
 
   h2 {
     font-size: 1.75rem; /* 28px */
     margin: 24px 0;
-    color: transparent; /* Text transparent machen */
-    background-image: linear-gradient(90deg, var(--mint), var(--blue), var(--lila), var(--pink), var(--apricot));
-    background-clip: text; /* Farbverlauf auf Text anwenden */
+    color: var(--yellow);
     -webkit-background-clip: text;
   }
 
@@ -99,7 +95,7 @@
   }
   
   .btn {
-    background-color: var(--blue);
+    background-color: var(--cyan);
     text-decoration: none;
     color: var(--darkText);
     padding: 8px 16px;
