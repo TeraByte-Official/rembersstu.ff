@@ -1,1 +1,232 @@
-Sample Text
+<style>
+  * { 
+    margin:0;
+    padding: 0;
+  }
+
+  :root{
+    --mainBackground: #111;
+    --nav: #222;
+    --bgNav：#444;
+    --primaerText:#f1f1f1;
+    --darkText:#111;
+    --mint: #B7F7DA;
+    --blue: #48d1cc;
+    --lila: #b57edc;
+    --pink: #EB71BE;
+    --apricot: #F6C8B4;
+  }
+  
+  nav {
+    background-color: var(--nav);
+    color: var(--primaerText);
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 10px;
+  }
+  
+  nav a {
+    display: block;
+    padding: 8px 16px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: all 0.5s;
+  }
+  nav a.active {
+    color: var(--blue);  
+  }
+  
+  main {
+    font-size: 16px;
+    background-color: var(--mainBackground);
+    color: var(--primaerText);
+    @media (min-width: 800px) {
+      font-size: 20px;
+    }
+  }
+  
+  a {color: var(--primaerText);}
+  
+  h1 {
+    font-size: 2.25rem; /* 36px */
+    margin: 0;
+    padding: 32px;
+    background-image: linear-gradient(90deg, var(--mint), var(--blue), var(--lila), var(--pink), var(--apricot));
+    color: var(--darkText);
+  }
+
+  h2 {
+    font-size: 1.75rem; /* 28px */
+    margin: 24px 0;
+    color: transparent; /* Text transparent machen */
+    background-image: linear-gradient(90deg, var(--mint), var(--blue), var(--lila), var(--pink), var(--apricot));
+    background-clip: text; /* Farbverlauf auf Text anwenden */
+    -webkit-background-clip: text;
+  }
+
+  h3 {
+    font-size: 1.375rem; /* 22px */
+  }
+
+  h4 {
+    font-size: 1.125rem; /* 18px */
+  }
+  
+  p {
+    text-align: left;
+    margin-bottom: 16px;
+  }
+  
+  .content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  article {
+    min-height: 100vh;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
+    padding-bottom: 80px;
+  }
+  
+  article section, article p.intro {
+    padding: 16px;
+    margin-top: 32px;
+  }
+  
+  .btn {
+    background-color: var(--blue);
+    text-decoration: none;
+    color: var(--darkText);
+    padding: 8px 16px;
+    margin: 16px;
+    border-radius: 16px;
+  }
+  
+  .generator {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .resultContainer {
+    width: calc(50% - 16px);
+    padding: 16px;
+    min-height: 25vh;
+    max-height: 30vh;
+    margin: 8px;
+    background-color: var(--nav);
+    border-radius: 16px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .resultContainer.biggerContainer {
+    min-height: 31vh;
+    max-height: 35vh;
+  }
+  
+  .resultContainer .result {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    height: 100%; 
+  }
+  
+  .btnGenerator {
+    width: 100%;
+    border: none;
+    color: var(--darkText) !important;
+  }
+  
+  ul{
+    padding: 0 16px 24px;
+  }
+  
+  .resultContainer h3 {
+    margin-bottom: 8px;
+  }
+  
+  .colorResult:empty {
+    display: none;
+  }
+  
+  .colorResultContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    align-content: center;
+    @media (min-width: 800px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0 6px;
+      font-size: rem
+    }
+  }
+  
+  .colorResultContainer p.colorResult {
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 0.7rem;
+    margin: 6px;
+    @media (min-width: 800px) {
+      padding: 32px 16px;
+      margin: 0 6px;
+      font-size: 1rem;
+    }
+  }
+  
+  footer {
+    padding: 32px 16px 48px;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+      li {
+        display:flex;
+        justify-content: flex-start;
+        padding: 2px 0;
+      }
+      .icon {
+        font-weight: bold;
+        width: 40px;
+        margin-right: 16px;
+      }
+    }
+    
+    .created {font-size: 0.7rem;}
+
+  }
+  
+  svg {
+      width: 20px;
+      height: 20px;
+    }
+  
+</style>
+
+<nav>
+  <a href="#home">Home</a>
+</nav>
+<main>
+  <article id="home">
+    <h1>rember's stuff</h1>
+
+    <p class="intro description content">
+      Text
+    </p>
+
+    <section class ="content">
+      <h2>Section</h2>
+    </section>
+  </article>
