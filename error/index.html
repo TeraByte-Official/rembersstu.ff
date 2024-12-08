@@ -235,11 +235,13 @@
     <h1>rember's stuff</h1>
 
     <section class ="content">
-      <h2>error 000: no error</h2>
+      <h2><modifiable id="title">000: n/a</modifiable></h2>
     </section>
 
     <p class="content">
-    nothing seems to be wrong. <br> <br>
+    <modifiable id="desc">
+    nothing seems to be wrong.
+    </modifiable> <br> <br>
     try <a href="https://terabyte-official.github.io/rembersstu.ff/">going back home?</a>
     <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
     </p>
@@ -248,3 +250,372 @@
 <footer>
  <a href="https://github.com/TeraByte-Official/rembersstu-ff/tree/main">this site is open-source</a> | <a href="https://github.com/TeraByte-Official/rembersstu.ff/issues/new">have a suggestion?</a>
 </footer>
+
+<script>
+  function updateContent() {
+    const hash = window.location.hash.slice(1); // Get hash and remove the '#'
+    const title = document.getElementById('title');
+    const desc = document.getElementById('desc');
+
+    if(hash) {
+      switch (hash) {
+        // information
+        case "100": {
+          title.textContent = `100: continue`;
+          desc.textContent = `please continue the request, or ignore this if it already finished.`;
+          break;
+        }
+        case "101": {
+          title.textContent = `101: switching protocols`;
+          desc.textContent = `this page is switching to another protocol.`;
+          break;
+        }
+        case "102": {
+          title.textContent = `102: processing`;
+          desc.textContent = `please wait.`;
+          break;
+        }
+        case "103": {
+          title.textContent = `103: early hints`;
+          desc.textContent = `you may preload resources, or preconnect to the origin.`;
+          break;
+        }
+
+        // success
+        case "200": {
+          title.textContent = `200: ok`;
+          desc.textContent = `request succeeded.`;
+          break;
+        }
+        case "201": {
+          title.textContent = `201: created`;
+          desc.textContent = `request succeeded, and new resource created.`;
+          break;
+        }
+        case "202": {
+          title.textContent = `202: accepted`;
+          desc.textContent = `request recieved, but not yet processed.`;
+          break;
+        }
+        case "203": {
+          title.textContent = `203: non-authoritative info`;
+          desc.textContent = `returned data is not equal to data from origin server.`;
+          break;
+        }
+        case "204": {
+          title.textContent = `204: no content`;
+          desc.textContent = `there is no content to send.`;
+          break;
+        }
+        case "205": {
+          title.textContent = `205: reset content`;
+          desc.textContent = `please refresh the page.`;
+          break;
+        }
+        case "206": {
+          title.textContent = `206: partial content`;
+          desc.textContent = `client requested part(s) of resource.`;
+          break;
+        }
+        case "207": {
+          title.textContent = `207: multi-status`;
+          desc.textContent = `multiple status codes may be appropriate.`;
+          break;
+        }
+        case "208": {
+          title.textContent = `208: already reported`;
+          desc.textContent = `the internal contents of the given bindings were already enumerated.`;
+          break;
+        }
+        case "226": {
+          title.textContent = `226: im used`;
+          desc.textContent = `one or more instance-manipulations were applied to current instance.`;
+          break;
+        }
+
+        // redirection
+        case "300": {
+          title.textContent = `300: multiple choices`;
+          desc.textContent = `there is more than one possible response. please choose one.`;
+          break;
+        }
+        case "301": {
+          title.textContent = `301: moved permanently`;
+          desc.textContent = `this page's location has been changed permanently.`;
+          break;
+        }
+        case "302": {
+          title.textContent = `302: found`;
+          desc.textContent = `this page's location has been changed temporarily.`;
+          break;
+        }
+        case "303": {
+          title.textContent = `303: see other`;
+          desc.textContent = `the page you are looking for is somewhere else.`;
+          break;
+        }
+        case "304": {
+          title.textContent = `304: not modified`;
+          desc.textContent = `response has not been modified.`;
+          break;
+        }
+        case "305": {
+          title.textContent = `305: use proxy`;
+          desc.textContent = `deprecated due to security concerns.`;
+          break;
+        }
+        case "306": {
+          title.textContent = `306: no longer used`;
+          desc.textContent = `this code was used in a previous version.`;
+          break;
+        }
+        case "307": {
+          title.textContent = `307: temporary redirect`;
+          desc.textContent = `this page's location has been changed temporarily. please use the same method to get to it.`;
+          break;
+        }
+        case "308": {
+          title.textContent = `308: permanent redirect`;
+          desc.textContent = `this page's location has been changed permanently. please use the same method to get to it.`;
+          break;
+        }
+
+        // client error
+        case "400": {
+          title.textContent = `400: bad request`;
+          desc.textContent = `there appears to be a client error. the server cannot/will not process the request.`;
+          break;
+        }
+        case "401": {
+          title.textContent = `401: unauthenticated`;
+          desc.textContent = `you should authenticate yourself, `;
+          desc.insertAdjacentHTML('afterend', '<em>now!</em>');
+          break;
+        }
+        case "402": {
+          title.textContent = `402: payment required`;
+          desc.textContent = `rarely used; no standard convention exists.`;
+          break;
+        }
+        case "403": {
+          title.textContent = `403: forbidden`;
+          desc.textContent = `you do not have permission to view this page.`;
+          break;
+        }
+        case "404": {
+          title.textContent = `404: not found`;
+          desc.textContent = `this page doesn't seem to exist.`;
+          break;
+        }
+        case "405": {
+          title.textContent = `405: method not allowed`;
+          desc.textContent = `this page does not allow you to do that.`;
+          break;
+        }
+        case "406": {
+          title.textContent = `406: not acceptable`;
+          desc.textContent = `this! is! <b>unacceptableeeeeeeeeeeeeeeeeeeeeeeeeee!!!!!</b>`;
+          break;
+        }
+        case "407": {
+          title.textContent = `407: proxy authentication required`;
+          desc.textContent = `the proxy should authenticate itself, `;
+          desc.insertAdjacentHTML('afterend', '<em>now!</em>');
+          break;
+        }
+        case "408": {
+          title.textContent = `408: request timeout`;
+          desc.textContent = `the server is idle.`;
+          break;
+        }
+        case "409": {
+          title.textContent = `409: conflict`;
+          desc.textContent = `there is a conflict between the request and the server.`;
+          break;
+        }
+        case "410": {
+          title.textContent = `410: gone`;
+          desc.textContent = `the page you are looking for has been deleted.`;
+          desc.insertAdjacentHTML('afterend', '<br>forever.');
+          break;
+        }
+        case "411": {
+          title.textContent = `411: length required`;
+          desc.textContent = `the content-length header field is not defined.`;
+          break;
+        }
+        case "412": {
+          title.textContent = `412: precondition failed`;
+          desc.textContent = `the server does not meet one or more of the given preconditions.`;
+          break;
+        }
+        case "413": {
+          title.textContent = `413: content too large`;
+          desc.textContent = `the request body is too large. the server may have closed the connection.`;
+          break;
+        }
+        case "414": {
+          title.textContent = `414: uri too long`;
+          desc.textContent = `the given uri is longer than the server accepts.`;
+          break;
+        }
+        case "415": {
+          title.textContent = `415: unsupported media type`;
+          desc.textContent = `the media format of the requested data is not supported.`;
+          break;
+        }
+        case "416": {
+          title.textContent = `416: range not satisfiable`;
+          desc.textContent = `the ranges cannot be fulfilled.`;
+          break;
+        }
+        case "417": {
+          title.textContent = `417: expectation failed`;
+          desc.textContent = `the expectation cannot be met.`;
+          break;
+        }
+        case "418": {
+          title.textContent = `418: i'm a teapot`;
+          desc.textContent = `the client refuses to make coffee with a teapot.`;
+          break;
+        }
+        case "419": {
+          title.textContent = `419: which one of you was gonna tell me tea tastes different if you put it in hot water?`;
+          desc.textContent = ``
+          desc.insertAdjacentHTML('afterend', 
+            '<colored style="color: #ff00ff;">you were putting it in cold water??</colored><br>'
+            +'<colored style="color: #ff8800;">client. answer the question client.</colored><br>'
+            +'<colored style="color: #ffff00;">...yeah? i thought for like five years that people just put it in hot water to... speed up the "tea-ification" process. didn\'t realize there was an actual reason.</colored><br>'
+            +'<colored style="color: #ff8800;">you don\'t have the patience to microwave water for three minutes???</colored><br>'
+            +'<colored style="color: #0088ff;">why are you. putting it in the <b>microwave</b>. <b>to boil it???</b></colored><br>'
+            +'<colored style="color: #ff8800;">do you think i have the patience to boil water on the stove???</colored><br>'
+            +'<colored style="color: #0088ff;"><b>it takes less than a minute!!</b></colored><br>'
+            +'<colored style="color: #ff8800;">dude is your stove powered by the <b>freaking sun??????</b></colored><br>'
+            +'<colored style="color: #0088ff;"><b>how long does it take you to boil a cup of water on the stove???</b></colored><br>'
+            +'<colored style="color: #ff8800;"><b>like seven minutes!!!</b></colored><br>'
+            +'<colored style="color: #0088ff;">just stick the mug on top of the stove on medium heat and it boils in like two minutes. less than that if you use a saucepan.</colored><br>'
+            +'<colored style="color: #ff8800;">you\'re putting the <b>whole mug</b> on the stove??? <b>on medium heat???</b> is your stove enchanted???</colored><br>'
+            +'<colored style="color: #00ff00;">every single person here is a freaking lunatic...</colored><br>'
+            +'<colored style="color: #00ffff;">do none of you own a freaking kettle!?</colored>'
+          );
+          break;
+        }
+        case "421": {
+          title.textContent = `421: misdirected request`;
+          desc.textContent = `the server the request was directed to cannot produce a response.`;
+          break;
+        }
+        case "422": {
+          title.textContent = `422: unprocessable content`;
+          desc.textContent = `the request could not be followed due to semantic errors.`;
+          break;
+        }
+        case "423": {
+          title.textContent = `423: locked`;
+          desc.textContent = `this site is locked.`;
+          break;
+        }
+        case "424": {
+          title.textContent = `424: failed dependency`;
+          desc.textContent = `the request failed due to failure of a previous request.`;
+          break;
+        }
+        case "425": {
+          title.textContent = `425: too early`;
+          desc.textContent = `this request may be replayed, so the server refused.`;
+          break;
+        }
+        case "426": {
+          title.textContent = `426: upgrade required`;
+          desc.textContent = `please upgrade to a different protocol.`;
+          break;
+        }
+        case "428": {
+          title.textContent = `428: precondition required`;
+          desc.textContent = `the server requires the request to be conditional.`;
+          break;
+        }
+        case "429": {
+          title.textContent = `429: too many requests`;
+          desc.textContent = `you have sent too many requests in a short time. in other words, you are being rate-limited.`;
+          break;
+        }
+        case "431": {
+          title.textContent = `431: request header fields too large`;
+          desc.textContent = `the request's header fields are too large, so the server refused.`;
+          break;
+        }
+        case "451": {
+          title.textContent = `451: unavailable for legal reasons`;
+          desc.textContent = `this page cannot legally be shown.`;
+          break;
+        }
+
+        // server error
+        case "500": {
+          title.textContent = `500: internal server error`;
+          desc.textContent = `the server encountered an error it couldn't handle. generic.`;
+          break;
+        }
+        case "501": {
+          title.textContent = `501: not implemented`;
+          desc.textContent = `the request method is not supported by the server.`;
+          break;
+        }
+        case "502": {
+          title.textContent = `502: bad gateway`;
+          desc.textContent = `invalid response was sent to gateway server.`;
+          break;
+        }
+        case "503": {
+          title.textContent = `503: service unavailable`;
+          desc.textContent = `the server is not ready to handle the request.`;
+          break;
+        }
+        case "504": {
+          title.textContent = `504: gateway timeout`;
+          desc.textContent = `the gateway server did not get a response in time.`;
+          break;
+        }
+        case "505": {
+          title.textContent = `505: http version not supported`;
+          desc.textContent = `the http version used is not supported by the server`;
+          break;
+        }
+        case "506": {
+          title.textContent = `506: variant also negotiates`;
+          desc.textContent = `the chosen variant is configured to engage in content negotiation.`;
+          break;
+        }
+        case "507": {
+          title.textContent = `507: insufficient storage`;
+          desc.textContent = `the server does not have enough storage space to complete the request.`;
+          break;
+        }
+        case "508": {
+          title.textContent = `508: loop detected`;
+          desc.textContent = `the server fell into an infinite loop`;
+          break;
+        }
+        case "510": {
+          title.textContent = `510: not extended`;
+          desc.textContent = `the declared extension is not supported.`;
+          break;
+        }
+        case "511": {
+          title.textContent = `511: network authentication required`;
+          desc.textContent = `the client should authenticate itself, `;
+          desc.insertAdjacentHTML('afterend', '<em>now!</em>');
+          break;
+        }
+        default: {
+          title.textContent = `${hash}: invalid`;
+          desc.textContent = `the response given is not valid. this usually means something is very wrong.`;
+          break;
+        }
+      }
+    }
+  }
+
+  updateContent();
+</script>
