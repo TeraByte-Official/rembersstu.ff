@@ -243,7 +243,9 @@
     this is a template page.
     it is copied and edited to make all the pages in this website. <br>
     you shouldn't be able to see this. <br>
+    <editable id="getout">
     <a href="https://terabyte-official.github.io/rembersstu.ff/">get out.</a>
+    </editable>
     <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
     </p>
 </main>
@@ -251,3 +253,13 @@
 <footer>
  <a href="https://github.com/TeraByte-Official/rembersstu-ff/tree/main">this site is open-source</a> | <a href="https://github.com/TeraByte-Official/rembersstu.ff/issues/new">have a suggestion?</a>
 </footer>
+
+<script>
+  const sound = new Audio('get out.ogg');
+  sound.load();
+  const getout = document.getElementById('getout');
+  setTimeout(() => {
+    sound.play();
+    getout.innerHTML = `<a href="https://terabyte-official.github.io/rembersstu.ff/" style="color: #ff0000; font-size: 3em; font-weight: bold;">get out!!!</a>`;
+  }, 10000);
+</script>
