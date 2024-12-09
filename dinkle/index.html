@@ -1,0 +1,260 @@
+<head>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund&display=swap" rel="stylesheet">
+ <title>rember's stuff | dinkle</title>
+</head>
+
+<style>
+  * { 
+    margin: 0;
+    padding: 0;
+    font-family: "Playwrite DE Grund";
+  }
+
+  :root{
+    --mainBackground: #111;
+    --nav: #222;
+    --bgNav：#444;
+    --lightText: #f1f1f1;
+    --darkText: #111;
+    --yellow: #ff0;
+    --cyan: #0ff;
+  }
+  
+  nav {
+    background-color: var(--nav);
+    color: var(--lightText);
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 10px;
+  }
+  
+  nav a {
+    display: block;
+    padding: 8px 16px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: all 0.5s;
+  }
+  nav a.active {
+    color: var(--cyan);  
+  }
+  
+  main {
+    font-size: 16px;
+    background-color: var(--mainBackground);
+    color: var(--lightText);
+    @media (min-width: 800px) {
+      font-size: 20px;
+    }
+  }
+
+ footer {
+    font-size: 16px;
+    background-color: var(--mainBackground);
+    color: var(--lightText);
+    @media (min-width: 800px) {
+      font-size: 15px;
+    }
+  }
+  
+  a {color: var(--lightText);}
+  
+  h1 {
+    font-size: 2.25rem; /* 36px */
+    margin: 0;
+    padding: 32px;
+    align: middle;
+    background-image: linear-gradient(90deg, var(--yellow), var(--cyan));
+    color: var(--darkText);
+  }
+
+  h2 {
+    font-size: 1.75rem; /* 28px */
+    margin: 24px 0;
+    color: var(--yellow);
+    -webkit-background-clip: text;
+  }
+
+  h3 {
+    font-size: 1.375rem; /* 22px */
+  }
+
+  h4 {
+    font-size: 1.125rem; /* 18px */
+  }
+  
+  p {
+    text-align: left;
+    margin-bottom: 16px;
+  }
+  
+  .content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  article {
+    min-height: 100vh;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
+    padding-bottom: 80px;
+  }
+  
+  article section, article p.intro {
+    padding: 16px;
+    margin-top: 32px;
+  }
+  
+  .btn {
+    background-color: var(--cyan);
+    text-decoration: none;
+    color: var(--darkText);
+    padding: 8px 16px;
+    margin: 16px;
+    border-radius: 16px;
+  }
+  
+  .generator {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .resultContainer {
+    width: calc(50% - 16px);
+    padding: 16px;
+    min-height: 25vh;
+    max-height: 30vh;
+    margin: 8px;
+    background-color: var(--nav);
+    border-radius: 16px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .resultContainer.biggerContainer {
+    min-height: 31vh;
+    max-height: 35vh;
+  }
+  
+  .resultContainer .result {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    height: 100%; 
+  }
+  
+  .btnGenerator {
+    width: 100%;
+    border: none;
+    color: var(--darkText) !important;
+  }
+  
+  ul{
+    padding: 0 16px 24px;
+  }
+  
+  .resultContainer h3 {
+    margin-bottom: 8px;
+  }
+  
+  .colorResult:empty {
+    display: none;
+  }
+  
+  .colorResultContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    align-content: center;
+    @media (min-width: 800px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0 6px;
+      font-size: rem
+    }
+  }
+  
+  .colorResultContainer p.colorResult {
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 0.7rem;
+    margin: 6px;
+    @media (min-width: 800px) {
+      padding: 32px 16px;
+      margin: 0 6px;
+      font-size: 1rem;
+    }
+  }
+  
+  footer {
+    padding: 32px 16px 48px;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+      li {
+        display:flex;
+        justify-content: flex-start;
+        padding: 2px 0;
+      }
+      .icon {
+        font-weight: bold;
+        width: 40px;
+        margin-right: 16px;
+      }
+    }
+    
+    .created {font-size: 0.7rem;}
+
+  }
+  
+  svg {
+      width: 20px;
+      height: 20px;
+    }
+  
+</style>
+
+<nav>
+  <a href="https://terabyte-official.github.io/rembersstu.ff/">home</a>
+  <a href="https://terabyte-official.github.io/rembersstu.ff/games/">games</a>
+</nav>
+<main>
+    <h1>rember's stuff</h1>
+
+    <section class ="content">
+      <h2>dinkle</h2>
+    </section>
+
+    <p class="content">
+    <img id="dinkle" src="dinkle.png" width="333" height="333" onclick="changeDinkleSize()">
+    <script>
+      function randint(lo, hi) {
+        return Math.floor(lo + Math.random() * (hi-lo+1))
+      }
+      function changeDinkleSize() {
+        const dinkle = document.getElementById("dinkle")
+        dinkle.width = randint(100,1000)
+        dinkle.height = randint(100,1000)
+      }
+    </script>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+    </p>
+</main>
+
+<footer>
+ <a href="https://github.com/TeraByte-Official/rembersstu-ff/tree/main">this site is open-source</a> | <a href="https://github.com/TeraByte-Official/rembersstu.ff/issues/new">have a suggestion?</a>
+</footer>
