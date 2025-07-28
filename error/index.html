@@ -254,7 +254,7 @@
 
 <script>
   function updateContent() {
-    const hash = window.location.hash.slice(1); // Get hash and remove the '#'
+    const hash = window.location.hash.slice(1);
     const title = document.getElementById('title');
     const desc = document.getElementById('desc');
 
@@ -477,7 +477,7 @@
         }
         case "418": {
           title.textContent = `418: i'm a teapot`;
-          desc.textContent = `the client refuses to make coffee with a teapot.`;
+          desc.textContent = `we may never know what actually happened.`;
           break;
         }
         case "419": {
@@ -538,7 +538,7 @@
         }
         case "429": {
           title.textContent = `429: too many requests`;
-          desc.textContent = `you have sent too many requests in a short time. in other words, you are being rate-limited.`;
+          desc.textContent = `you are being rate-limited.`;
           break;
         }
         case "431": {
@@ -555,7 +555,7 @@
         // server error
         case "500": {
           title.textContent = `500: internal server error`;
-          desc.textContent = `the server encountered an error it couldn't handle. generic.`;
+          desc.textContent = `the server encountered an error it couldn't handle.`;
           break;
         }
         case "501": {
@@ -619,4 +619,6 @@
   }
 
   updateContent();
+
+  window.addEventListener('hashchange', function () {location.reload()})
 </script>
